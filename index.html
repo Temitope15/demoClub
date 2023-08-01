@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Club Demo</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     
@@ -12,7 +13,7 @@
         <section>
             <header>
                 <!-- top bar will contain their email address and their contact -->
-           <div class="topbar"></div>
+           
             <nav>
                 <div><h1>Logo</h1></div>
                   <ul>
@@ -20,14 +21,20 @@
                     <li>About</li>
                     <li>Contact us</li>
                   </ul>
-                  <div> 
-                    <button>Menu</button>
+                  <div class="dropdown"> 
+                    <button class="dropbtn">Menu</button>
+                    <div class="dropdown-content">
+                        <a href="">Home</a><a href="">Home</a><a href="">Home</a>
+                    </div>
                   </div>
             </nav>
         </header>
             <!-- if the hero can slide, it'll make sense , the hero image will span through the nav too-->
-          <div>Hero Image</div>
-          <div>Hero Text</div>
+            <div class="hero-section">
+                <div class="hero-img">Hero Image</div>
+          <div class="hero-text">Hero Text</div>
+            </div>
+          
         </section>
         <!-- About us -->
         <section>
