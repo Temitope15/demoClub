@@ -10,7 +10,7 @@
     
     <main>
         <!-- Hero -->
-        <section>
+        <section class="top">
             <header>
                 <!-- top bar will contain their email address and their contact -->
            
@@ -21,9 +21,10 @@
                     <li>About</li>
                     <li>Contact us</li>
                   </ul>
-                  <div class="dropdown"> 
-                    <button class="dropbtn">Menu</button>
-                    <div class="dropdown-content">
+                  <div class="dropdown" id="dropdownParent"> 
+                    <button class="dropbtn" id="open" onclick="openDropdown()">Menu</button>
+                    <button class="closebtn" id="close" onclick="closeDropdown()">Close</button>
+                    <div class="dropdown-content" id="menu-links">
                         <a href="">Home</a><a href="">Home</a><a href="">Home</a>
                     </div>
                   </div>
@@ -37,9 +38,9 @@
           
         </section>
         <!-- About us -->
-        <section>
-            <div>Some Text</div>
-            <div>Image</div>
+        <section class="about-us">
+            <div class="hero-text">Some Text</div>
+            <div class="hero-img">Image</div>
         </section>
         <!-- services -->
         <!-- cards will be here like six sha -->
@@ -95,6 +96,6 @@
         </section>
             
     </footer>
-
+<script src="index.js"></script>
 </body>
 </html>
