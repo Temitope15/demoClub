@@ -80,6 +80,38 @@ display: none;
 }
 /* about us */
 
+/* services-section */
+.services-section{
+    background-color: darkorange;
+    width: 100%;
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.card{
+    background-color: white;
+    max-width:50%;
+    height:auto;
+    margin: 1em;
+    padding: 5px;
+    text-align:center;
+    border-radius:1em;
+}
+/* contact us section */
+.contact-us{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* footer */
+footer{
+    background-color: cornflowerblue;
+    color: white;
+}
 /* desktop view */
 @media  only screen and (min-width:680px){
 ul{
@@ -100,5 +132,12 @@ ul{
 .hero-text{
     width:50%
 }
-
+.services-section{
+    flex-direction:row;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
+}
+.card{
+    width:30%;
+}
 }
