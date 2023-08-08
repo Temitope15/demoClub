@@ -92,7 +92,7 @@ display: none;
 }
 .card{
     background-color: white;
-    max-width:50%;
+    max-width:100%;
     height:auto;
     margin: 1em;
     padding: 5px;
@@ -111,6 +111,17 @@ display: none;
 footer{
     background-color: cornflowerblue;
     color: white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:1.5rem 2.5rem;
+}
+.footer-parent-links{
+    margin-bottom: 1rem;
+}
+.footer-logo{
+    width:100%
 }
 /* desktop view */
 @media  only screen and (min-width:680px){
@@ -140,4 +151,13 @@ ul{
 .card{
     width:30%;
 }
+
+.footer-parent-links, .footer-links{
+    display:flex;
+    justify-content: space-between;
+}
+.footer-logo{
+    width:25%;
+}
+
 }
