@@ -15,19 +15,23 @@
                 <!-- top bar will contain their email address and their contact -->
            
             <nav>
-                <div><h1>Logo</h1></div>
+                <div><h1>Blessed Brothers</h1></div>
                   <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Contact us</li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact us</a></li>
                   </ul>
+                  
                   <div class="dropdown" id="dropdownParent"> 
                     <button class="dropbtn" id="open" onclick="openDropdown()">Menu</button>
-                    <button class="closebtn" id="close" onclick="closeDropdown()">Close</button>
                     <div class="dropdown-content" id="menu-links">
+                        <div class="dropdown-logo"><h1>Blessed Brothers</h1></div>
+                        <div><button class="closebtn styleclosebtn" id="close" onclick="closeDropdown()">Close</button></div>
                         <a href="">Home</a><a href="">Home</a><a href="">Home</a>
                     </div>
+
                   </div>
+                  
             </nav>
         </header>
             <!-- if the hero can slide, it'll make sense , the hero image will span through the nav too-->
@@ -89,14 +93,14 @@
 
     <footer>
         <section class="footer-parent-links">
-            <div class="footer-logo">Logo</div>
-            <div class="footer-links">
-            <div>Links</div>
-            <div>More</div>
+            <div class="footer-logo"><div><h1>Blessed Brothers</h1></div></div>
+            <div class="footer-links-parent">
+            <div  class="footer-links"><a href="">Home</a><a href="">Home</a><a href="">Home</a><a href="">Home</a><a href="">Home</a></div>
+            <div class="footer-links"><a href="">Home</a><a href="">Home</a><a href="">Home</a><a href="">Home</a><a href="">Home</a></div>
         </div>
         </section>
         <section>
-            <p>copyrights @2023</p>
+            <p class="copyright">copyrights@2023</p>
         </section>
             
     </footer>

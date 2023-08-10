@@ -4,9 +4,12 @@
     list-style: none;
     text-decoration: none;
 }
+a{
+    color: white;
+}
 /* navbar */
 nav{
-    background-color: transparent;
+    background-color: rgb(11, 1, 41);
     color:white;
     display:flex;
     flex-direction: row;
@@ -27,6 +30,8 @@ ul{
     display: block;
     color: black;
     padding: 0.75em;
+    text-align: center;
+    
 }
 .dropdown-content{
     display:none;
@@ -34,9 +39,15 @@ ul{
   background-color: white;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
  z-index: 1;
-  right: 0;
- min-width: 160px;
+  right: -12px;
+  top:-25px;
+ min-width: 90vw;
+ height:auto;
+ padding-top: 50px;
+ border-radius: 10px 10px 20px;
 }
+.styleclosebtn, .dropdown-logo{position: absolute; right:10px;  top: 12px;}
+.dropdown-logo{color:black;left: 10px; }
 .dropdown-content a:hover{
     background-color: green;
     color: white;
@@ -48,6 +59,11 @@ ul{
     outline:none;
     display: block;
     cursor: pointer;
+    z-index: 2;
+    
+}
+.get-started, .closebtn{
+    display:none;
 }
 /* hero-section */
 .hero-section, .about-us{
@@ -68,9 +84,7 @@ ul{
 .hero-text{
     background-color: brown;
 }
-.closebtn{
-display: none;
-}
+
 /* top */
 .top{
     background-color: darkgoldenrod;
@@ -113,8 +127,8 @@ footer{
     color: white;
     display:flex;
     flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    /* justify-content:center;
+    align-items:center; */
     padding:1.5rem 2.5rem;
 }
 .footer-parent-links{
@@ -123,12 +137,23 @@ footer{
 .footer-logo{
     width:100%
 }
+.copyright{
+    text-align:center;
+    font-style: oblique;
+    font-size: .8rem;
+}
+.footer-links a{
+    display: block;
+}
 /* desktop view */
 @media  only screen and (min-width:680px){
 ul{
     display:flex;
     flex-direction: row;
     gap: .75em;
+}
+.get-started{
+    display: block;
 }
 .dropbtn{
     display:none;
@@ -152,10 +177,7 @@ ul{
     width:30%;
 }
 
-.footer-parent-links, .footer-links{
-    display:flex;
-    justify-content: space-between;
-}
+/* git */
 .footer-logo{
     width:25%;
 }
