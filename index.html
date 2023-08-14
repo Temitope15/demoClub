@@ -1,115 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Club Demo</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css" />
     <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
-</head>
-<body>
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <main>
-        <!-- Hero -->
-        <section class="top">
-            <header>
-                <!-- top bar will contain their email address and their contact -->
-           
-            <nav>
-                <div><h1>Blessed Brothers</h1></div>
-                  <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Contact us</a></li>
-                  </ul>
-                  
-                  <div class="dropdown" id="dropdownParent"> 
-                    <button class="dropbtn" id="open" onclick="openDropdown()">Menu</button>
-                    <div class="dropdown-content" id="menu-links">
-                        <div class="dropdown-logo"><h1>Blessed Brothers</h1></div>
-                        <div><button class="closebtn styleclosebtn" id="close" onclick="closeDropdown()">Close</button></div>
-                        <a href="">Home</a><a href="">Home</a><a href="">Home</a>
-                    </div>
+      <!-- Hero -->
+      <section class="top">
+        <header>
+          <!-- top bar will contain their email address and their contact -->
 
-                  </div>
-                  
-            </nav>
-        </header>
-            <!-- if the hero can slide, it'll make sense , the hero image will span through the nav too-->
-            <div class="hero-section">
-                <div class="hero-text">
-                    <h1>Blessed Brothers of America</h1><p>You dream it, we provide it!</p>
+          <nav>
+            <div><h1>Blessed Brothers</h1></div>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact us</a></li>
+            </ul>
+
+            <div class="dropdown" id="dropdownParent">
+              <button class="dropbtn" id="open" onclick="openDropdown()">
+                Menu
+              </button>
+              <div class="dropdown-content" id="menu-links">
+                <div class="dropdown-logo"><h1>Blessed Brothers</h1></div>
+                <div>
+                  <button
+                    class="closebtn styleclosebtn"
+                    id="close"
+                    onclick="closeDropdown()"
+                  >
+                    Close
+                  </button>
                 </div>
-          <!-- <div class="hero-text"></div> -->
+                <a href="">Home</a><a href="">Home</a><a href="">Home</a>
+              </div>
             </div>
-          
-        </section>
-        <!-- About us -->
-        <section class="about-us">
-            <div class="hero-text">Some Text</div>
-            <div class="hero-img">Image</div>
-        </section>
-        <!-- services -->
-        <!-- cards will be here like six sha -->
-        <section class="services-section">
-            <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sit, quo amet et non ratione quod a error optio sapiente, animi magnam tempore consequatur voluptatum corrupti? Praesentium, recusandae. A officia voluptatibus maxime vel delectus, impedit reiciendis nesciunt dignissimos provident repellat facilis culpa dicta quod animi possimus omnis ipsa reprehenderit unde.</div>
-            <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sit, quo amet et non ratione quod a error optio sapiente, animi magnam tempore consequatur voluptatum corrupti? Praesentium, recusandae. A officia voluptatibus maxime vel delectus, impedit reiciendis nesciunt dignissimos provident repellat facilis culpa dicta quod animi possimus omnis ipsa reprehenderit unde.</div>
-            <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sit, quo amet et non ratione quod a error optio sapiente, animi magnam tempore consequatur voluptatum corrupti? Praesentium, recusandae. A officia voluptatibus maxime vel delectus, impedit reiciendis nesciunt dignissimos provident repellat facilis culpa dicta quod animi possimus omnis ipsa reprehenderit unde.</div>
-            <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sit, quo amet et non ratione quod a error optio sapiente, animi magnam tempore consequatur voluptatum corrupti? Praesentium, recusandae. A officia voluptatibus maxime vel delectus, impedit reiciendis nesciunt dignissimos provident repellat facilis culpa dicta quod animi possimus omnis ipsa reprehenderit unde.</div>
-            <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sit, quo amet et non ratione quod a error optio sapiente, animi magnam tempore consequatur voluptatum corrupti? Praesentium, recusandae. A officia voluptatibus maxime vel delectus, impedit reiciendis nesciunt dignissimos provident repellat facilis culpa dicta quod animi possimus omnis ipsa reprehenderit unde.</div>
-            <div class="card">Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto sit, quo amet et non ratione quod a error optio sapiente, animi magnam tempore consequatur voluptatum corrupti? Praesentium, recusandae. A officia voluptatibus maxime vel delectus, impedit reiciendis nesciunt dignissimos provident repellat facilis culpa dicta quod animi possimus omnis ipsa reprehenderit unde.</div>
-        </section>
-        <!-- Team -->
-        <!-- there should be a carousel here -->
-        <section>
-            <div class="team"></div>
-            <div class="team"></div>
-            <div class="team"></div>
-            <div class="team"></div>
-            <div class="team"></div>
-            <div class="team"></div>
-        </section>
-        <!-- there should be a section that allows for volunteering -->
-        <!-- contact us section -->
-        <section class="contact-us">
-            <!-- text input  -->
-            <form action="" method="post">
-             <h3>Send us an email!</h3>
-             <textarea name="" id="" cols="30" rows="10" placeholder="i am..."></textarea>
+          </nav>
+        </header>
+        <!-- if the hero can slide, it'll make sense , the hero image will span through the nav too-->
+        <div class="hero-section">
+          <div class="hero-text">
+            <h1>Blessed Brothers of <span class="america">America</span></h1>
+            <p>You dream it, <span class="p-span">we provide it!</span></p>
+          </div>
+          <!-- <div class="hero-text"></div> -->
+        </div>
+      </section>
+      <!-- About us -->
+      <section class="about-us">
+        <div class="hero-text"></div>
+        <div class="hero-img"></div>
+      </section>
+      <!-- services -->
+      <!-- cards will be here like six sha -->
+      <section class="services-section">
+        <div class="team-intro">
+            <h3>OUR SERVICES</h3>
+            <p>We are the best construction materials plug!</p>
+          </div>
+        <div class="card">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem animi,
+            sed ducimus non fuga molestias quis quia eaque aliquam tenetur
+            distinctio numquam! Hic nisi perferendis labore? Accusamus veritatis
+            ullam cupiditate.
+          </p>
+        </div>
+        <div class="card">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem animi,
+            sed ducimus non fuga molestias quis quia eaque aliquam tenetur
+            distinctio numquam! Hic nisi perferendis labore? Accusamus veritatis
+            ullam cupiditate.
+          </p>
+        </div>
+        <div class="card">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem animi,
+            sed ducimus non fuga molestias quis quia eaque aliquam tenetur
+            distinctio numquam! Hic nisi perferendis labore? Accusamus veritatis
+            ullam cupiditate.
+          </p>
+        </div>
+        <div class="card">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem animi,
+            sed ducimus non fuga molestias quis quia eaque aliquam tenetur
+            distinctio numquam! Hic nisi perferendis labore? Accusamus veritatis
+            ullam cupiditate.
+          </p>
+        </div>
+        <div class="card">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem animi,
+            sed ducimus non fuga molestias quis quia eaque aliquam tenetur
+            distinctio numquam! Hic nisi perferendis labore? Accusamus veritatis
+            ullam cupiditate.
+          </p>
+        </div>
+        <div class="card">
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem animi,
+            sed ducimus non fuga molestias quis quia eaque aliquam tenetur
+            distinctio numquam! Hic nisi perferendis labore? Accusamus veritatis
+            ullam cupiditate.
+          </p>
+        </div>
+      </section>
+      <!-- Team -->
+      <!-- there should be a carousel here -->
+      <section>
+        <div class="team-intro">
+          <h3>TEAM</h3>
+          <p>meet the Blessed brothers of America</p>
+        </div>
+        <div class="team-parent">
+            <div class="team card">
+              <div class="position">
+                <img src="./assets/team-1.jpg" alt="team lead" srcset="" />
+                <div class="team-info">
+                  <h4>Lawrence Akinsunmade</h4>
+                  <p>PRESIDENT</p>
+                </div>
+              </div>
+              <div class="about-lead">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
+                  minima voluptatem perspiciatis dignissimos praesentium saepe.
+                </p>
+              </div>
+            </div>
+            <div class="team card">
+              <div class="position">
+                <img src="./assets/team-1.jpg" alt="team lead" srcset="" />
+                <div class="team-info">
+                  <h4>Lawrence Akinsunmade</h4>
+                  <p>PRESIDENT</p>
+                </div>
+              </div>
+              <div class="about-lead">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
+                  minima voluptatem perspiciatis dignissimos praesentium saepe.
+                </p>
+              </div>
+            </div>
+            <div class="team card">
+              <div class="position">
+                <img src="./assets/team-1.jpg" alt="team lead" srcset="" />
+                <div class="team-info">
+                  <h4>Lawrence Akinsunmade</h4>
+                  <p>PRESIDENT</p>
+                </div>
+              </div>
+              <div class="about-lead">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
+                  minima voluptatem perspiciatis dignissimos praesentium saepe.
+                </p>
+              </div>
+            </div>
+        </div>
+       
+      </section>
+      <!-- there should be a section that allows for volunteering -->
+      <!-- contact us section -->
+      <section class="contact-us">
+        <!-- text input  -->
+        <form action="" method="post">
+          <h3>Send us an email!</h3>
+          <div class="text-area">
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="i am..."
+            ></textarea>
             <!-- i'll integrate the email via html method  there will be a text field that will send an email to their email address -->
-            <input type="text" name="" id="">
-            <a href="mailto:"><button>Send</button></a>
-        </form>
-            <!-- if possible integrate a map -->
-            <!-- after map -->
-            <address>
-                <h3>address</h3>
-                <p>Lorem, ipsum dolor.</p>
-                <h3>phone number</h3>
-                <p>Lorem, ipsum.</p>
-                <h3>email address</h3>
-                <p>Lorem, ipsum dolor.</p>
-            </address>
 
-        </section>
+            <a href="mailto:"><button>Send</button></a>
+          </div>
+        </form>
+        <div class="line-divide"></div>
+        <!-- if possible integrate a map -->
+        <!-- after map -->
+        <address>
+          <div class="address-container">
+            <h3>address</h3>
+            <p>17, Sarah Ommotoso Avenue, Kajola, Akure</p>
+          </div>
+          <div class="address-container">
+            <h3>phone number</h3>
+            <p>+2347053171777</p>
+          </div>
+          <div class="address-container">
+            <h3>email address</h3>
+            <p>blessedbrothers@gmail.com</p>
+          </div>
+        </address>
+      </section>
     </main>
 
     <footer>
-        <section class="footer-parent-links">
-            <div class="footer-logo"><div><h1>Blessed Brothers</h1></div></div>
-            <div class="footer-links-parent">
-            <div  class="footer-links"><a href="">Home</a><a href="">Home</a><a href="">Home</a><a href="">Home</a><a href="">Home</a></div>
-            <div class="footer-links"><a href="">Home</a><a href="">Home</a><a href="">Home</a><a href="">Home</a><a href="">Home</a></div>
+      <section class="footer-parent-links">
+        <div class="footer-logo">
+          <div><h1>Blessed Brothers</h1></div>
         </div>
-        </section>
-        <section>
-            <p class="copyright">copyrights@2023</p>
-        </section>
-            
+        <!-- <div class="footer-links-parent"> -->
+        <div class="footer-links">
+          <a href="">Home</a><a href="">Home</a><a href="">Home</a
+          ><a href="">Home</a><a href="">Home</a>
+        </div>
+        <div class="footer-links">
+          <a href="">About</a><a href="">About</a><a href="">About</a
+          ><a href="">About</a><a href="">About</a>
+        </div>
+        <div class="footer-links hide show">
+          <a href="">Home</a><a href="">Home</a><a href="">Home</a
+          ><a href="">Home</a><a href="">Home</a>
+        </div>
+        <div class="footer-links hide show">
+          <a href="">About</a><a href="">About</a><a href="">About</a
+          ><a href="">About</a><a href="">About</a>
+        </div>
+        <!-- </div> -->
+      </section>
+      <section>
+        <p class="copyright">copyrights@2023</p>
+      </section>
     </footer>
-<script src="index.js"></script>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
