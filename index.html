@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Club Demo</title>
     <link rel="stylesheet" href="index.css" />
+    <!-- google icon -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,8 +26,9 @@
             <div><h1>Blessed Brothers</h1></div>
             <ul>
               <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact us</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact us</a></li>
             </ul>
 
             <div class="dropdown" id="dropdownParent">
@@ -44,13 +46,13 @@
                     <i class="material-icons">close</i>
                   </button>
                 </div>
-                <a href="">Home</a><a href="">Home</a><a href="">Home</a>
+                <a href="#hero">Home</a><a href="#about">About</a><a href="#services">Services</a> <a href="#contact">Contact Us</a>
               </div>
             </div>
           </nav>
         </header>
         <!-- if the hero can slide, it'll make sense , the hero image will span through the nav too-->
-        <div class="hero-section">
+        <div class="hero-section" id="hero">
           <div class="hero-text">
             <h1>Blessed Brothers of <span class="america">America</span></h1>
             <p>You dream it, <span class="p-span">we provide it!</span></p>
@@ -59,7 +61,7 @@
         </div>
       </section>
       <!-- About us -->
-      <section class="about-us">
+      <section class="about-us" id="about">
         <div class="team-intro">
           <h3>ABOUT US</h3>
         </div>
@@ -67,6 +69,9 @@
           <div class="about-us-info">
             <p>Blessed Brothers was initially established as a lub with the inspiration to share cognitive business ideas in 2021, with different gestures and gradual improvement, we decided to establish an indigenous company delivering the highest quality and best value products for construction companies.</p>
             <p>Our dedicated team have rich and vast ideas to reach out to the yearning aspiration and needs of our customers which is our priority </p>
+            <div class="group-photo">
+              <img src="./assets/group-photo.jpg" alt="">
+            </div>
           </div>
           <div class="vision-mission">
             <div class="our-mission">
@@ -83,82 +88,62 @@
               </ul>
                   </div>
           </div>
+          
         </div>
-        <div class="hero-img"></div>
+        <div class="values">
+            <h3>Our Core Values</h3>
+            <div class="value-card-parent">
+              <div class="value-card">Integrity</div>
+              <div class="value-card">Discipline</div>
+              <div class="value-card">Innovation</div>
+              <div class="value-card">Loyalty</div>
+              <div class="value-card">Accountability</div>
+            </div>
+          </div>
+        
       </section>
       <!-- services -->
       <!-- cards will be here like six sha -->
-      <section class="services-section">
+      <section class="services-section" id="services">
         <div class="team-intro">
-          <h3>ABOUT US</h3>
+          <h3>Our Services</h3>
+          <p>We are a team of brothers given to making contruction easy for you! We offer the following</p>
         </div>
         <div class="card-parent">
           <div class="card">
+            <div class="img">
+              <img src="./assets/service-1.jpg" alt="">
+            </div>
             <div class="text">
               <h3>Construction Products</h3>
             </div>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem animi,
-              sed ducimus non fuga molestias quis quia eaque aliquam tenetur
-              distinctio numquam! Hic nisi perferendis labore? Accusamus veritatis
-              ullam cupiditate.
+              We deliver premium construction products which include, simple construction building materials and prime source building tools.
             </p>
           </div>
           <div class="card">
+            <div class="img">
+              <img src="./assets/service-2.jpeg" alt="">
+            </div>
             <div class="text">
-              <h3>Construction Products</h3>
+              <h3>Job-site Supply</h3>
             </div>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem animi,
-              sed ducimus non fuga molestias quis quia eaque aliquam tenetur
-              distinctio numquam! Hic nisi perferendis labore? Accusamus veritatis
-              ullam cupiditate.
+              You can partner with us to provide you with materials you need on-site such us as , wood, concrete, steel, cement, bricks, first aid boxes, traffic and plastic drums and metals.
             </p>
           </div>
           <div class="card">
+            <div class="img">
+              <img src="./assets/service-3.jpeg" alt="">
+            </div>
             <div class="text">
-              <h3>Construction Products</h3>
+              <h3>Professional Tools</h3>
             </div>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem animi,
-              sed ducimus non fuga molestias quis quia eaque aliquam tenetur
-              distinctio numquam! Hic nisi perferendis labore? Accusamus veritatis
-              ullam cupiditate.
+              We also provide contractors tools they will need when working in the site. tools and materials like , construction hard hats, fire extinguishers, back support belts and industrial tapes.
             </p>
           </div>
-          <div class="card">
-            <div class="text">
-              <h3>Construction Products</h3>
-            </div>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem animi,
-              sed ducimus non fuga molestias quis quia eaque aliquam tenetur
-              distinctio numquam! Hic nisi perferendis labore? Accusamus veritatis
-              ullam cupiditate.
-            </p>
-          </div>
-          <div class="card">
-            <div class="text">
-              <h3>Construction Products</h3>
-            </div>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem animi,
-              sed ducimus non fuga molestias quis quia eaque aliquam tenetur
-              distinctio numquam! Hic nisi perferendis labore? Accusamus veritatis
-              ullam cupiditate.
-            </p>
-          </div>
-          <div class="card">
-            <div class="text">
-              <h3>Construction Products</h3>
-            </div>
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem animi,
-              sed ducimus non fuga molestias quis quia eaque aliquam tenetur
-              distinctio numquam! Hic nisi perferendis labore? Accusamus veritatis
-              ullam cupiditate.
-            </p>
-          </div>
+         
         </div>
       </section>
       <!-- Team -->
@@ -183,13 +168,14 @@
                   minima voluptatem perspiciatis dignissimos praesentium saepe.
                 </p>
               </div>
+              <div class="socials"><a href="mailto:Sunmadeonline@gmail.com"><i class="material-icons">email</i>sunmadeonline@gmail.com</a> <a href="tel:+18045025865"><i class="material-icons">call</i>+18045025865</a></div>
             </div>
             <div class="team card">
               <div class="position">
                 <img src="./assets/team-1.jpg" alt="team lead" srcset="" />
                 <div class="team-info">
-                  <h4>Lawrence Akinsunmade</h4>
-                  <p>PRESIDENT</p>
+                  <h4>Victor Abayomi</h4>
+                  <p>GENERAL SECRETARY</p>
                 </div>
               </div>
               <div class="about-lead">
@@ -198,13 +184,14 @@
                   minima voluptatem perspiciatis dignissimos praesentium saepe.
                 </p>
               </div>
+              <div class="socials"><a href="mailto:yomvic@yahoo.com"><i class="material-icons">email</i>yomvic@yahoo.com</a> <a href="tel:+13176030578"><i class="material-icons">call</i>+13176030578</a></div>
             </div>
             <div class="team card">
               <div class="position">
                 <img src="./assets/team-1.jpg" alt="team lead" srcset="" />
                 <div class="team-info">
-                  <h4>Lawrence Akinsunmade</h4>
-                  <p>PRESIDENT</p>
+                  <h4>Philip Akinseye</h4>
+                  <p>FINANCIAL SECRETARY</p>
                 </div>
               </div>
               <div class="about-lead">
@@ -213,13 +200,31 @@
                   minima voluptatem perspiciatis dignissimos praesentium saepe.
                 </p>
               </div>
+              <div class="socials"><a href="mailto:kehindeakinseye@rocketmail.com"><i class="material-icons">email</i>kehindeakinseye@rocketmail.com</a> <a href="tel:+13174061877"><i class="material-icons">call</i>+13174061877</a></div>
             </div>
+            <div class="team card">
+              <div class="position">
+                <img src="./assets/team-1.jpg" alt="team lead" srcset="" />
+                <div class="team-info">
+                  <h4>Rowland Akinyosoye</h4>
+                  <p>PRO</p>
+                </div>
+              </div>
+              <div class="about-lead">
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam
+                  minima voluptatem perspiciatis dignissimos praesentium saepe.
+                </p>
+              </div>
+              <div class="socials"><a href="mailto:rowlandindcarea@yahoo.com"><i class="material-icons">email</i> rowlandindcarea@yahoo.com</a> <a href="tel:+13014185433"><i class="material-icons">call</i>+13014185433</a></div>
+            </div>
+
         </div>
        
       </section>
       <!-- there should be a section that allows for volunteering -->
       <!-- contact us section -->
-      <section class="contact-us">
+      <section class="contact-us" id="contact">
         <!-- text input  -->
         <form action="" method="post">
           <h3>Send us an email!</h3>
