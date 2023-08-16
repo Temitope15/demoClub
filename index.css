@@ -39,9 +39,12 @@ nav {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0.5em;
-  padding: 0.75em 0;
-  border-radius: 0.6em;
+  margin: 0 0.5em;
+  padding: 0.5rem 0;
+}
+.logo{
+  width:120px;
+  max-width: 100%;
 }
 ul {
   display: none;
@@ -378,6 +381,10 @@ footer {
   background-color: var(--secondaryColor);
   border-radius: 8px;
 }
+.footer-logo-img{
+  width: 200px;
+  height: 80px;
+}
 /* desktop view */
 @media only screen and (min-width: 680px) {
   ul {
@@ -385,6 +392,7 @@ footer {
     flex-direction: row;
     gap: 0.75em;
   }
+  
   .get-started, .show {
     display: block;
   }
