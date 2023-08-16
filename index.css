@@ -71,7 +71,7 @@ ul {
 .dropdown-logo {
   position: absolute;
   right: 10px;
-  top: 12px;
+  top: 10px;
 }
 .dropdown-logo {
   color: black;
@@ -110,9 +110,18 @@ ul {
   font-size: 0.9rem;
   margin-top: 0.4rem;
 }
-.america,
+
 .p-span {
   color: var(--secondaryColor);
+}
+.america{
+  -webkit-background-clip: text;
+	background-clip: text;
+	background-image: url('./assets/usa-bg.png');
+  background-repeat: no-repeat;
+  background-size: 100%;
+	color: transparent;
+  font-size: larger;
 }
 
 .hero-text {
@@ -144,9 +153,12 @@ ul {
   background-color: var(--primaryColor);
 }
 .vision{
-  list-style-type: disc;
+  
   display: block;
-  margin-left: -0.8rem;
+  margin-left: -2.0rem;
+}
+.vision li{
+  display: flex;
 }
 /* services-section */
 .services-section {
