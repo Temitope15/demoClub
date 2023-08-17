@@ -199,11 +199,15 @@ ul {
 border-bottom: 3px solid var(--secondaryColor);
 border-radius: 5px;
 cursor: pointer;
+position:relative;
+top:0;
+transition:all .2s ease-in-out;
 }
 .value-card:hover{
   background-color: var(--secondaryColor);
   color: var(--colorWhite);
-  padding: .75rem;
+  top:3px;
+  
 }
 /* services-section */
 .services-section {
