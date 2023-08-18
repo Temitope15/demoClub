@@ -46,3 +46,32 @@ function changeContent(){
 }
 
 setInterval(changeContent, 3000)
+
+//vertical animation about us section
+
+const aboutContainer = document.querySelector('.about-container');;
+
+function animateOnScroll(){
+   const windowHeight = window.innerHeight;
+   const aboutTop = aboutContainer.getBoundingClientRect().top;
+
+   if (aboutTop < windowHeight){
+  aboutContainer.classList.add("animate");
+   }
+}
+window.addEventListener("scroll", animateOnScroll);
+
+//horizontal animation
+const serviceItems = document.querySelectorAll(".service-item")
+
+function horizontalAnimateOnScroll(){
+   const cardHeight = window.innerHeight
+
+   serviceItems.forEach((item)=>{
+      const itemTop = item.getBoundingClientRect().top;
+      if(itemTop < cardHeight){
+         item.classList.add("animate")
+      }
+   })
+}
+window.addEventListener("scroll", horizontalAnimateOnScroll);
