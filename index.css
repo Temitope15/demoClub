@@ -9,9 +9,10 @@ html {
   scroll-behavior: smooth;
 }
 :root {
-  --primaryColor: rgb(11, 1, 41);
+  --primaryColor: #0B0129;
   --secondaryColor: rgb(230, 79, 79);
   --colorWhite: #fff;
+  --spanColor: rgb(219, 25, 25);
 }
 a {
   color: var(--colorWhite);
@@ -118,7 +119,16 @@ ul {
 }
 
 .p-span {
-  color: var(--secondaryColor);
+  color: var(--spanColor);
+  font-style: italic;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+.span-text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
 }
 .america{
   -webkit-background-clip: text;

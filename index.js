@@ -21,3 +21,28 @@ const openDropdown = ()=>{
 
 
 
+// for  the changing of color and  text
+const topColor = document.querySelector('.top');
+const heroText =  document.querySelector('.hero-text-p');
+const spanText = document.querySelector('.p-span');
+
+// array
+const colors = ["#0B0129", "#2D2926"];
+const foreText = ["You dream it,", "Your needs,"];
+const lastText = ["we provide it!", "our priority!"];
+
+let index = 0;
+
+// create a function to change the contents
+
+function changeContent(){
+   topColor.style.transition = "backgroundColor 0.8s ease-in-out";
+   topColor.style.backgroundColor =  colors[index];
+  
+   heroText.textContent = foreText[index];
+   spanText.textContent = lastText[index];
+
+   index = (index + 1) % colors.length;
+}
+
+setInterval(changeContent, 3000)
