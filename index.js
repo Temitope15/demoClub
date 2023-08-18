@@ -27,7 +27,7 @@ const heroText =  document.querySelector('.hero-text-p');
 const spanText = document.querySelector('.p-span');
 
 // array
-const colors = ["#0B0129", "#2D2926"];
+const colors = ["#0B0129", "#0B131D"];
 const foreText = ["You dream it,", "Your needs,"];
 const lastText = ["we provide it!", "our priority!"];
 
