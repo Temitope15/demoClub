@@ -198,6 +198,7 @@ ul {
 /* slider section */
 .slider{
   width:100%;
+  padding:10px;
   overflow:hidden;
   position:relative;
 }
@@ -207,7 +208,7 @@ transition: transform 0.5 ease-in-out;
 }
 .slider-container img{
   width:100%;
-  height:auto
+  height:auto;
 }
 .slide-indicators{
   display:flex;
