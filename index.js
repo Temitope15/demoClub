@@ -77,38 +77,58 @@ function horizontalAnimateOnScroll(){
 window.addEventListener("scroll", horizontalAnimateOnScroll);
 
 // gallery section
-const sliderContainer = document.querySelector(".slider-container");
-const images = document.querySelectorAll(".slider-container img");
-const indicators = document.querySelectorAll(".indicator");
-const imageWidth = images[0].clientWidth;
-let currentIndex = 0;
+// const sliderContainer = document.querySelector(".slider-container");
+// const images = document.querySelectorAll(".slider-container img");
+// const indicators = document.querySelectorAll(".indicator");
+// const imageWidth = images[0].clientWidth;
+// let currentIndex = 0;
 
-function updateSliderPosition() {
-  sliderContainer.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+// function updateSliderPosition() {
+//   sliderContainer.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+// }
+
+// function updateIndicators() {
+//   indicators.forEach((indicator, index) => {
+//     indicator.classList.toggle("active", index === currentIndex);
+//   });
+// }
+
+// function slideTo(index) {
+//   currentIndex = index;
+//   updateSliderPosition();
+//   updateIndicators();
+// }
+
+// function slideNext() {
+//   currentIndex = (currentIndex + 1) % images.length;
+//   updateSliderPosition();
+//   updateIndicators();
+// }
+
+// indicators.forEach((indicator, index) => {
+//   indicator.addEventListener("click", () => {
+//     slideTo(index);
+//   });
+// });
+
+// setInterval(slideNext, 3000); // Slide every 3 seconds
+
+let slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
-
-function updateIndicators() {
-  indicators.forEach((indicator, index) => {
-    indicator.classList.toggle("active", index === currentIndex);
-  });
-}
-
-function slideTo(index) {
-  currentIndex = index;
-  updateSliderPosition();
-  updateIndicators();
-}
-
-function slideNext() {
-  currentIndex = (currentIndex + 1) % images.length;
-  updateSliderPosition();
-  updateIndicators();
-}
-
-indicators.forEach((indicator, index) => {
-  indicator.addEventListener("click", () => {
-    slideTo(index);
-  });
-});
-
-setInterval(slideNext, 3000); // Slide every 3 seconds
