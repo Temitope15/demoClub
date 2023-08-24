@@ -77,42 +77,6 @@ function horizontalAnimateOnScroll(){
 window.addEventListener("scroll", horizontalAnimateOnScroll);
 
 // gallery section
-// const sliderContainer = document.querySelector(".slider-container");
-// const images = document.querySelectorAll(".slider-container img");
-// const indicators = document.querySelectorAll(".indicator");
-// const imageWidth = images[0].clientWidth;
-// let currentIndex = 0;
-
-// function updateSliderPosition() {
-//   sliderContainer.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
-// }
-
-// function updateIndicators() {
-//   indicators.forEach((indicator, index) => {
-//     indicator.classList.toggle("active", index === currentIndex);
-//   });
-// }
-
-// function slideTo(index) {
-//   currentIndex = index;
-//   updateSliderPosition();
-//   updateIndicators();
-// }
-
-// function slideNext() {
-//   currentIndex = (currentIndex + 1) % images.length;
-//   updateSliderPosition();
-//   updateIndicators();
-// }
-
-// indicators.forEach((indicator, index) => {
-//   indicator.addEventListener("click", () => {
-//     slideTo(index);
-//   });
-// });
-
-// setInterval(slideNext, 3000); // Slide every 3 seconds
-
 let slideIndex = 0;
 showSlides();
 
@@ -130,5 +94,12 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
+
+// the email via mailto section
+document.getElementById('emailLink').addEventListener("click", function(){
+   var emailBody = encodeURIComponent(document.getElementById('emailBody').value);
+   var mailtoLink = "mailto:blessedbrothers21@yahoo.com?subject=Request%20for%20clarity&body=" + emailBody;
+   window.location.href = mailtoLink;
+})
