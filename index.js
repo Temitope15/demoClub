@@ -97,6 +97,63 @@ function showSlides() {
   setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
 
+// slider section for members
+const slider = document.querySelector('.slider');
+const images = document.querySelectorAll('.slider img');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const memberName = document.getElementById('memberName');
+const nameCard = document.querySelector('.name-card');
+
+let currentIndex = 0;
+
+// Calculate the total width of all images
+let totalWidth = 0;
+images.forEach((image) => {
+    totalWidth += image.width;
+});
+
+function scrollSlider() {
+    const scrollAmount = -currentIndex * (totalWidth / images.length);
+    slider.style.transform = `translateX(${scrollAmount}px)`;
+    const currentImage = images[currentIndex];
+    memberName.textContent = currentImage.getAttribute('data-name');
+}
+
+function showNameCard() {
+    nameCard.style.display = 'block';
+}
+
+function hideNameCard() {
+    nameCard.style.display = 'none';
+}
+
+prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    scrollSlider();
+    showNameCard();
+});
+
+nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    scrollSlider();
+    showNameCard();
+});
+
+slider.addEventListener('mouseenter', showNameCard);
+slider.addEventListener('mouseleave', hideNameCard);
+
+// Adjust the scroll speed (in milliseconds)
+const scrollInterval = 3000;
+
+setInterval(() => {
+    currentIndex = (currentIndex + 1) % images.length;
+    scrollSlider();
+}, scrollInterval);
+
+// Initial setup
+scrollSlider();
+showNameCard();
 // the email via mailto section
 document.getElementById('emailLink').addEventListener("click", function(){
    var emailBody = encodeURIComponent(document.getElementById('emailBody').value);
