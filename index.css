@@ -415,7 +415,8 @@ transform: translateX(0);
 
 .slider-item img {
   max-width: 100%;
-  height: auto;
+  width:280px;
+  height: 300px;
 }
 
 .name-card {
@@ -427,9 +428,13 @@ transform: translateX(0);
   bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
-  
+  transition:all .2s ease-in-out;
 }
-
+.name-card:hover, #prevBtn:hover, #nextBtn:hover{
+  background-color: var(--colorWhite);
+  color: var(--secondaryColor);
+  cursor: pointer;
+}
 .slider-controls {
   text-align: center;
   margin-top: 10px;
@@ -444,6 +449,11 @@ transform: translateX(0);
   padding: 10px 20px;
   border: none;
   cursor: pointer;
+  transition:all .2s ease-in-out;
+  border-radius: 8px;
+}
+#prevBtn:hover, #nextBtn:hover{
+  border: 1px solid var(--secondaryColor);
 }
 
 
