@@ -97,6 +97,39 @@ function showSlides() {
   setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
 
+// slider section for members
+const slider = document.querySelector('.slider');
+const sliderItems = document.querySelectorAll('.slider-item');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+let currentIndex = 0;
+
+function scrollSlider(index) {
+    sliderItems.forEach(item => {
+        item.style.transform = `translateX(-${index * 100}%)`;
+    });
+    updateButtonsVisibility();
+}
+
+function updateButtonsVisibility() {
+    prevBtn.style.display = currentIndex === 0 ? 'none' : 'block';
+    nextBtn.style.display = currentIndex === sliderItems.length - 1 ? 'none' : 'block';
+}
+
+prevBtn.addEventListener('click', () => {
+    currentIndex = Math.max(currentIndex - 1, 0);
+    scrollSlider(currentIndex);
+});
+
+nextBtn.addEventListener('click', () => {
+    currentIndex = Math.min(currentIndex + 1, sliderItems.length - 1);
+    scrollSlider(currentIndex);
+});
+
+// Initialize slider
+scrollSlider(currentIndex);
+updateButtonsVisibility();
+
 // the email via mailto section
 document.getElementById('emailLink').addEventListener("click", function(){
    var emailBody = encodeURIComponent(document.getElementById('emailBody').value);

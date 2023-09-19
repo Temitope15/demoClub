@@ -389,6 +389,64 @@ transform: translateX(0);
 .socials a i{
   font-size: 16px;
 }
+
+/* slider */
+#members{
+  padding: 0 20px;
+}
+/* Styles for .slider-container remain the same */
+.slider-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider {
+  width: auto;
+  height: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+}
+
+.slider-item {
+  display: inline-block;
+  text-align: center;
+}
+
+.slider-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+.name-card {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  
+}
+
+.slider-controls {
+  text-align: center;
+  margin-top: 10px;
+  display:flex;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+#prevBtn, #nextBtn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+
 /* contact us section */
 .contact-us {
   display: flex;
