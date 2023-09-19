@@ -99,61 +99,37 @@ function showSlides() {
 
 // slider section for members
 const slider = document.querySelector('.slider');
-const images = document.querySelectorAll('.slider img');
+const sliderItems = document.querySelectorAll('.slider-item');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
-const memberName = document.getElementById('memberName');
-const nameCard = document.querySelector('.name-card');
-
 let currentIndex = 0;
 
-// Calculate the total width of all images
-let totalWidth = 0;
-images.forEach((image) => {
-    totalWidth += image.width;
-});
-
-function scrollSlider() {
-    const scrollAmount = -currentIndex * (totalWidth / images.length);
-    slider.style.transform = `translateX(${scrollAmount}px)`;
-    const currentImage = images[currentIndex];
-    memberName.textContent = currentImage.getAttribute('data-name');
+function scrollSlider(index) {
+    sliderItems.forEach(item => {
+        item.style.transform = `translateX(-${index * 100}%)`;
+    });
+    updateButtonsVisibility();
 }
 
-function showNameCard() {
-    nameCard.style.display = 'block';
-}
-
-function hideNameCard() {
-    nameCard.style.display = 'none';
+function updateButtonsVisibility() {
+    prevBtn.style.display = currentIndex === 0 ? 'none' : 'block';
+    nextBtn.style.display = currentIndex === sliderItems.length - 1 ? 'none' : 'block';
 }
 
 prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    scrollSlider();
-    showNameCard();
+    currentIndex = Math.max(currentIndex - 1, 0);
+    scrollSlider(currentIndex);
 });
 
 nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    scrollSlider();
-    showNameCard();
+    currentIndex = Math.min(currentIndex + 1, sliderItems.length - 1);
+    scrollSlider(currentIndex);
 });
 
-slider.addEventListener('mouseenter', showNameCard);
-slider.addEventListener('mouseleave', hideNameCard);
+// Initialize slider
+scrollSlider(currentIndex);
+updateButtonsVisibility();
 
-// Adjust the scroll speed (in milliseconds)
-const scrollInterval = 3000;
-
-setInterval(() => {
-    currentIndex = (currentIndex + 1) % images.length;
-    scrollSlider();
-}, scrollInterval);
-
-// Initial setup
-scrollSlider();
-showNameCard();
 // the email via mailto section
 document.getElementById('emailLink').addEventListener("click", function(){
    var emailBody = encodeURIComponent(document.getElementById('emailBody').value);
