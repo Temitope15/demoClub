@@ -20,9 +20,7 @@ a {
 a:hover, .address-container a:hover{
   color: var(--secondaryColor);
 }
-body {
-  scrollbar-width: none;
-}
+
 
 body::-webkit-scrollbar {
   width: 0rem; 
@@ -396,26 +394,45 @@ transform: translateX(0);
 }
 .slider-container {
   position: relative;
-  overflow: hidden;
+  margin:0 auto;
+  max-width:300px;
+  width:100%;
 }
 
 .slider {
-  width: auto;
-  height: auto;
+  width: 100%;
+  display:flex;
   white-space: nowrap;
-  overflow: hidden;
-  position: relative;
+  overflow-x: scroll;
+  gap:20px;
+  padding:20px;
+
+}
+.slider::-webkit-scrollbar{
+  width:0;
+  height:0;
 }
 
-.slider-item {
-  display: inline-block;
-  text-align: center;
+.slider-container::before, .slider-container::after{
+ content: "";
+ position:absolute;
+ top:0;
+ height:100%;
+ width:30px;
+}
+.slider-container::before{
+  left:0;
+  background:linear-gradient(90deg, white, transparent)
+}
+.slider-container::after{
+  right:0;
+  background:linear-gradient(-90deg, white, transparent)
 }
 
 .slider-item img {
-  max-width: 100%;
   width:280px;
-  height: 300px;
+  border-radius:5px;
+  cursor:pointer;
 }
 
 .name-card {
@@ -618,6 +635,10 @@ margin-bottom:20px;
   width:100%;
   height:50%
 } */
+.slider-container {
+  
+  max-width:900px;
+}
   .card-parent, .team-parent {
     display: flex;
     flex-direction: row;
