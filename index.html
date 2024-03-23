@@ -31,15 +31,11 @@
                 ><img src="./assets/logo.png" alt="" class="logo"
               /></a>
             </div>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#contact">Contact us</a></li>
+            <ul id="navLinks">
             </ul>
 
             <div class="dropdown" id="dropdownParent">
-              <button class="dropbtn" id="open" onclick="openDropdown()">
+              <button class="dropbtn" id="open">
                 <i class="material-icons">menu</i>
               </button>
               <div class="dropdown-content" id="menu-links">
@@ -50,7 +46,7 @@
                   <button
                     class="closebtn styleclosebtn"
                     id="close"
-                    onclick="closeDropdown()"
+                   
                   >
                     <i class="material-icons">close</i>
                   </button>
@@ -128,12 +124,7 @@
         </div>
         <div class="values">
           <h3>Our Core Values</h3>
-          <div class="value-card-parent">
-            <div class="value-card">Integrity</div>
-            <div class="value-card">Discipline</div>
-            <div class="value-card">Innovation</div>
-            <div class="value-card">Loyalty</div>
-            <div class="value-card">Accountability</div>
+          <div class="value-card-parent" id="value-card-parent">
           </div>
         </div>
       </section>
@@ -236,7 +227,7 @@
             </div>
 
             <div class="socials">
-              <a href="mailto:Sunmadeonline@gmail.com"
+              <a href="mailto:sunmadeonline@gmail.com"
                 ><i class="material-icons">email</i>sunmadeonline@gmail.com</a
               >
               <a href="tel:+18045025865"
@@ -311,56 +302,8 @@
           <h3>OUR MEMBERS</h3>
           <p>Meet the Blessed brothers of America</p>
         </div>
-        <div class="slider-container">
-          <div class="slider">
-            <div class="slider-item">
-              <img src="./assets/bb-0.jpg" alt="Member 0" />
-              <div class="name-card">Lawrence Akinsunmade</div>
-            </div>
-            <div class="slider-item">
-              <img src="./assets/bb-1.jpg" alt="Member 1" />
-              <div class="name-card">Olusola Victor</div>
-            </div>
-            <div class="slider-item">
-              <img src="./assets/bb-2.jpg" alt="Member 2" />
-              <div class="name-card">Anthony Adeduwon</div>
-            </div>
-            <div class="slider-item">
-              <img src="./assets/bb-3.jpg" alt="Member 3" />
-              <div class="name-card">Kehinde Akinseye</div>
-            </div>
-            <div class="slider-item">
-              <img src="./assets/bb-4.jpg" alt="Member 4" />
-              <div class="name-card">Dada Akinsuroju</div>
-            </div>
-            <div class="slider-item">
-              <img src="./assets/bb-5.jpg" alt="Member 5" />
-              <div class="name-card">Rolland Akinyosoye</div>
-            </div>
-            <div class="slider-item">
-              <img src="./assets/bb-6.jpg" alt="Member 6" />
-              <div class="name-card">Idowu Akinbobola</div>
-            </div>
-            <div class="slider-item">
-              <img src="./assets/bb-7.jpg" alt="Member 7" />
-              <div class="name-card">Bayo Akinrolabu</div>
-            </div>
-            <div class="slider-item">
-              <img src="./assets/bb-8.jpg" alt="Member 8" />
-              <div class="name-card">Sina Aderinwoye</div>
-            </div>
-            <div class="slider-item">
-              <img src="./assets/bb-9.jpg" alt="Member 9" />
-              <div class="name-card">Babatope Ojo</div>
-            </div>
-            <div class="slider-item">
-              <img
-                src="https://i.ibb.co/8jQvsR5/IMG-20231105-WA0118.jpg"
-                alt="member 10"
-              />
-              <div class="name-card">Kehinde Akinseye</div>
-            </div>
-            <!-- Add more members as needed -->
+        <div class="slider-container" id="members_container">
+          <div class="slider" id="slider">
           </div>
           <!-- <div class="slider-controls">
             <button id="prevBtn">Previous</button>
@@ -443,6 +386,6 @@
         </p>
       </section>
     </footer>
-    <script src="index.js"></script>
+    <script src="index.js" type="module"></script>
   </body>
 </html>

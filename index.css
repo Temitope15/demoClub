@@ -399,7 +399,7 @@ img {
 .slider-container {
   position: relative;
   margin: 0 auto;
-  max-width: 300px;
+  max-width: 350px;
   width: 100%;
 }
 
@@ -422,7 +422,7 @@ img {
   position: absolute;
   top: 0;
   height: 100%;
-  width: 25px;
+  width: 15px;
 }
 .slider-container::before {
   left: 0;
@@ -660,7 +660,7 @@ footer {
     gap: 10px;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 920px) {
+@media screen and (min-width: 681px) and (max-width: 920px) {
   .team {
     width: 45%;
   }
