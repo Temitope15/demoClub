@@ -143,7 +143,57 @@ values.forEach(value => {
 })
 
 //leaders
+const leaderContainer = document.getElementById('leaders_container')
 LEADERS.forEach(leader => {
+   const leaderCard = document.createElement('div')
+   leaderCard.classList.add('team', 'card','service-item')
+//leader position card (img + position)
+   const position = document.createElement('div')
+   position.classList.add('position')
+//leader img
+   const leaderImg = document.createElement('img')
+   leaderImg.src = leader.memberpics
+   // leader info section
+   const leaderInfo = document.createElement('div')
+   leaderInfo.classList.add('team-info')
+   const leaderName = document.createElement('h4')
+   leaderName.textContent = leader.memberName
+   const leaderPosition = document.createElement('p')
+   leaderPosition.textContent = leader.position
+
+   leaderInfo.appendChild(leaderName)
+   leaderInfo.appendChild(leaderPosition)
+
+   position.appendChild(leaderImg)
+   position.appendChild(leaderInfo)
+
+   //socials section
+   const socialLinks = document.createElement('div')
+   socialLinks.classList.add('socials')
+   //anchor tags
+   //email
+   const email = document.createElement('a')
+   email.href = `mailto:${leader.email}`
+   const icon1 = document.createElement('i')
+   icon1.classList.add('material-icons')
+   icon1.textContent = 'email'
+   email.textContent = leader.email
+   email.appendChild(icon1)
+   //tel
+   const tel = document.createElement('a')
+   tel.href = `tel:${leader.tel}`
+   const icon2 = document.createElement('i')
+   icon2.classList.add('material-icons')
+   icon1.textContent = 'call'
+   tel.textContent = leader.tel
+   tel.appendChild(icon2)
+
+   socialLinks.appendChild(email)
+   socialLinks.appendChild(tel)
+   //bringing everything together
+   leaderCard.appendChild(position)
+   leaderCard.appendChild(socialLinks)
+   leaderContainer.appendChild(leaderCard)
    console.log(leader.memberName)
 })
 
