@@ -63,7 +63,15 @@ ul {
   position: relative;
   display: inline-block;
 }
-.dropdown-content a {
+.dropdown-content ul {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.75em;
+  margin-left: 0px;
+  padding: 0.5em;
+}
+.dropdown-content ul>li>a {
   display: block;
   color: black;
   padding: 0.75em;
@@ -383,6 +391,8 @@ img {
   color: var(--secondaryColor);
   font-size: 0.75rem;
   display: flex;
+  flex-direction: row-reverse;
+  gap:4px;
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease-in-out;
@@ -543,10 +553,11 @@ footer {
   width: 100%;
   margin: 20px auto 0;
 }
-.footer-links a {
-  display: block;
-  width: 100%;
-  padding: 5px 0;
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .footer-logo {
@@ -657,6 +668,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     margin: 0 10px;
+    text-wrap: nowrap;
     gap: 10px;
   }
 }

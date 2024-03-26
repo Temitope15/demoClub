@@ -1,7 +1,7 @@
 
 const menuBtn = document.getElementById('open')
 const closeBtn = document.getElementById('close')
-const dropdownContent = document.getElementById('menu-links')
+const dropdownContent = document.getElementById('dropdown-mobile-links')
 const dropdownParent = document.getElementsByClassName('dropdown')[0]
 
 //members
@@ -120,17 +120,23 @@ const links = [
    { text: "Home", link: "#" },
    { text: "About", link: "#about" },
    { text: "Services", link: "#services" },
-   { text: "Contact us", link: "#contact" }
+   { text: "Contact us", link: "#contact" },
+   { text: "Our members", link: "#members" }
 ];
-const linkParent = document.getElementById("navLinks")
-links.forEach(link => {
-   const linkText = document.createElement('li')
-   const anchor = document.createElement('a')
-   anchor.href = link.link
-   anchor.textContent = link.text
-   linkText.appendChild(anchor)
-   linkParent.appendChild(linkText)
-})
+function generateLinks(linksArray, targetElementId) {
+   const linkParent = document.getElementById(targetElementId)
+   linksArray.forEach(link => {
+      const linkText = document.createElement('li')
+      const anchor = document.createElement('a')
+      anchor.href = link.link
+      anchor.textContent = link.text
+      linkText.appendChild(anchor)
+      linkParent.appendChild(linkText)
+   })
+}
+generateLinks(links, "navLinks")
+generateLinks(links, "menu-links")
+generateLinks(links, "footerLinks")
 
 //core values
 const values = ["Integrity", "Discipline", "Innovation", "Loyalty", "Accountability"]
@@ -184,9 +190,10 @@ LEADERS.forEach(leader => {
    tel.href = `tel:${leader.tel}`
    const icon2 = document.createElement('i')
    icon2.classList.add('material-icons')
-   icon1.textContent = 'call'
+   icon2.textContent = 'call'
    tel.textContent = leader.tel
    tel.appendChild(icon2)
+   
 
    socialLinks.appendChild(email)
    socialLinks.appendChild(tel)
@@ -304,3 +311,7 @@ document.getElementById('emailLink').addEventListener("click", function () {
    var mailtoLink = "mailto:blessedbrothers21@yahoo.com?subject=Request%20for%20clarity&body=" + emailBody;
    window.location.href = mailtoLink;
 })
+//get current copyright year
+const currentYear = document.getElementById('date')
+const d = new Date()
+currentYear.innerHTML = d.getFullYear()

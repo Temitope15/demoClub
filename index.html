@@ -38,7 +38,7 @@
               <button class="dropbtn" id="open">
                 <i class="material-icons">menu</i>
               </button>
-              <div class="dropdown-content" id="menu-links">
+              <div class="dropdown-content" id="dropdown-mobile-links">
                 <div class="dropdown-logo">
                   <img src="./assets/logo.png" alt="" class="logo" />
                 </div>
@@ -51,10 +51,9 @@
                     <i class="material-icons">close</i>
                   </button>
                 </div>
-                <a href="#">Home</a><a href="#about">About</a
-                ><a href="#services">Services</a>
-                <a href="#contact">Contact Us</a>
-              </div>
+                <ul id="menu-links"></ul>
+                </div>
+              
             </div>
           </nav>
         </header>
@@ -296,15 +295,14 @@
         <div class="footer-logo">
           <img src="./assets/logo.png" alt="" class="logo footer-logo-img" />
         </div>
-        <div class="footer-links">
-          <a href="#home">Home</a><a href="#about">About</a
-          ><a href="#services">Services</a><a href="#contact">Contact </a>
-        </div>
+        <ul class="footer-links" id="footerLinks">
+          
+        </ul>
       </section>
       <section>
         <p class="copyright">
           <a href="https://wa.link/rndpw2" target="_blank"
-            >blessedbrothers@2023</a
+            >blessedbrothers@<span id="date"></span></a
           >
         </p>
       </section>
