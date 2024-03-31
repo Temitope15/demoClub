@@ -78,6 +78,10 @@ const MEMBERS = [
       memberName: "Victor Adenusi",
       memberpics: "./assets/Blessed_brothers/victor_adenusi.jpg",
    },
+   {
+      memberName: "Bamidele Ayodele",
+      memberpics: "./assets/Blessed_brothers/bamidele_ayodele.jpg",
+   },
 
 ]
 //leaders
